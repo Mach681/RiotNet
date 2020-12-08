@@ -989,4 +989,93 @@ namespace RiotNet.Models
         /// </summary>
         public const string CONTROL_WARD = "CONTROL_WARD";
     }
+    /// <summary>
+    /// List of valid locations for updates to be published.
+    /// </summary>
+    public static class PublishLocation
+    {
+        /// <summary>
+        /// Riot Client
+        /// </summary>
+        public const string RIOT_CLIENT = "riotclient";
+        /// <summary>
+        /// Riot Status
+        /// </summary>
+        public const string RIOT_STATUS = "riotstatus";
+        /// <summary>
+        /// Game
+        /// </summary>
+        public const string GAME = "game";
+    }
+
+    /// <summary>
+    /// Valid maintenance status descriptions
+    /// </summary>
+    public static class MaintenanceStatusItem
+    {
+        /// <summary>
+        /// Scheduled
+        /// </summary>
+        public const string SCHEDULED = "scheduled";
+        /// <summary>
+        /// In progress
+        /// </summary>
+        public const string IN_PROGRESS = "in_progress";
+        /// <summary>
+        /// Complete
+        /// </summary>
+        public const string COMPLETE = "complete";
+    }
+    /// <summary>
+    /// Valid incident severity descriptions
+    /// </summary>
+    public static class IncidentSeverityItem
+    {
+        /// <summary>
+        /// Info
+        /// </summary>
+        public const string INFO = "info";
+        /// <summary>
+        /// Warning
+        /// </summary>
+        public const string WARNING = "warning";
+        /// <summary>
+        /// Critical
+        /// </summary>
+        public const string CRITICAL = "critical";
+    }
+    /// <summary>
+    /// Valid platform values
+    /// </summary>
+    public static class Platform
+    {
+        /// <summary>
+        /// Windows
+        /// </summary>
+        public const string WINDOWS = "windows";
+        /// <summary>
+        /// Mac OS
+        /// </summary>
+        public const string MACOS = "macos";
+        /// <summary>
+        /// Android
+        /// </summary>
+        public const string ANDROID = "android";
+        /// <summary>
+        /// iOS
+        /// </summary>
+        public const string IOS = "ios";
+        /// <summary>
+        /// PS4
+        /// </summary>
+        public const string PS4 = "ps4";
+        /// <summary>
+        /// XB1
+        /// </summary>
+        public const string XBONE = "xbone";
+        /// <summary>
+        /// Switch
+        /// </summary>
+        public const string SWITCH = "switch";
+    }
 }
