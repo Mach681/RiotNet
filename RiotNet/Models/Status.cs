@@ -34,12 +34,12 @@ namespace RiotNet.Models
         /// <summary>
         /// List of content DTOs holding the title of the incident, update, maintenance, etc.
         /// </summary>
-        List<ContentDTO> Titles { get; set; }
+        public List<ContentDTO> Titles { get; set; }
 
         /// <summary>
         /// List of content DTOs holding the updates of the incident, update, maintenance, etc.
         /// </summary>
-        List<ContentDTO> Updates { get; set; }
+        public List<ContentDTO> Updates { get; set; }
 
         /// <summary>
         /// Gets or sets the time the status update was created in UTC

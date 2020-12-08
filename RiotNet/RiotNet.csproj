@@ -1,13 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <OutputType>Library</OutputType>
     <VersionPrefix>8.2.0</VersionPrefix>
-    <TargetFrameworks Condition=" '$(Configuration)' != 'ReleaseCoreOnly' ">net45;netstandard1.5</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(Configuration)' == 'ReleaseCoreOnly' ">netstandard1.5</TargetFrameworks>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <AssemblyName>RiotNet</AssemblyName>
     <PackageId>RiotNet</PackageId>
-    <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.5' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
     <Authors>AJ Richardson</Authors>
     <Description>A client for the Riot Games v4 API. This client is very flexible and configurable, and is designed for real-life use on a multithreaded server.</Description>
     <PackageProjectUrl>https://github.com/aj-r/RiotNet</PackageProjectUrl>
@@ -17,34 +16,11 @@
     <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
     <IncludeSource>True</IncludeSource>
     <IncludeSymbols>True</IncludeSymbols>
-    <Configurations>Debug;Release;ReleaseCoreOnly</Configurations>
+    <Configurations>Debug;Release</Configurations>
   </PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <Reference Include="System.ComponentModel.Annotations" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System.Net.Http" />
-    <Reference Include="System" />
-    <Reference Include="Microsoft.CSharp" />
-  </ItemGroup>
-
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <DefineConstants>$(DefineConstants);NET_45;DB_READY</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
-    <DefineConstants>$(DefineConstants);NET_STANDARD</DefineConstants>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='ReleaseCoreOnly|net45|AnyCPU'">
-    <Optimize>True</Optimize>
-  </PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
+  
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
-    <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
   </ItemGroup>
-
+  
 </Project>
